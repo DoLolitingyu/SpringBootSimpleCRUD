@@ -55,6 +55,7 @@ public class CustomersController {
         return "emp/add";
     }
 
+    //修改员工信息
     @PutMapping("/emp")
     public String editEmp(Employee employee){
         System.out.println(employee);
@@ -62,6 +63,7 @@ public class CustomersController {
         return "redirect:/emps";
     }
 
+    //删除员工信息
     @DeleteMapping("/emp/{id}")
     public String deleteEmp(@PathVariable("id") Integer id){
         employeeDao.delete(id);
