@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /crud
+
+spring:
+  messages:
+    basename: international.login
+  mvc:
+    date-format: yyyy-MM-dd HH:mm
+
+
+#spring:
+#  profiles:
+#    active: prod
+
+---
+
+spring:
+  profiles: dev
+
+server:
+  port: 8081
+
+---
+
+spring:
+  profiles: prod
+
+server:
+  port: 8082
+
+
+#people:
+#    name: 李听雨
+#    birthday: 2019/1/31
+#    age: 20
+#    dog:
+#       name: ${people.name}_dog
+#       age: ${random.int(10)}

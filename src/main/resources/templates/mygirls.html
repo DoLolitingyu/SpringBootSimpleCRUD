@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>hello!</h1>
+    <h2 th:text="${name}"></h2>
+    <h2>
+        <span  th:text="${girl}" th:each="girl:${girls}">test</span>
+        <p>${girl}.say()</p>
+    </h2>
+
+<!--
+    <form action="login" enctype="multipart/form-data" method="post">
+        用户名:<input name="username" type="text"/>
+        密码：<input name="password" type="password" />
+        性别:<input name="sex" type="radio" value="女"  />女
+             <input name="sex" type="radio" value="男"  />男
+        爱好:<input name="favirate" type="checkbox"/>sport
+             <input name="favirate" type="checkbox" />sing
+        所居住城市:<input name="city" type="text" />
+        上传照片:<input name="picture" type="file" />
+        自我介绍:<input name="introduce" type="text" />
+        注册ID:<input name="ID" type="hidden" />
+        <input name="reinput" type="reset" value="重置按钮" />
+        <input name="common" type="button" value="普通按钮" />
+        <input name="submite" type="submit" value="提交按钮" />
+    </form>
+    -->
+</body>
+</html>
