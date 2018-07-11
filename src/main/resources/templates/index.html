@@ -21,7 +21,7 @@
 	</head>
 
 	<body class="text-center">
-		<form class="form-signin" action="dashboard.html" th:action="@{/login}" method="post">
+		<form class="form-signin" action="#" th:action="@{/login}" method="post">
 			<img class="mb-4" src="asserts/img/bootstrap-solid.svg" th:src="@{/asserts/img/bootstrap-solid.svg}" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login_top}">Please sign in</h1>
             <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}" ></p>
@@ -35,6 +35,7 @@
         </label>
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login_sign}">Sign in</button>
+			<a class="btn btn-lg btn-primary btn-block" th:href="@{/reg}" th:text="#{login_top2}">Please sign up</a>
 			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>
 			<a class="btn btn-sm" th:href="@{/index.html(l='zh_CN')}">中文</a>
 			<a class="btn btn-sm" th:href="@{/index.html(l='en_US')}">English</a>
