@@ -1,6 +1,7 @@
 package top.dolo.springboot02.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ public class OrderDetailController {
     OrderDetailServiceImpl orderDetailService;
 
 //    //获取某个订单详情
-//    @GetMapping("/orderdetail/{id}")
+//    @GetMapping("/oriderdetal/{id}")
 //    public String findAll(@PathVariable("id") Integer id, Model model, HttpSession session){
 //        String userName = (String)session.getAttribute("LoginName");
 //        User user = userDAO.findByName(userName);

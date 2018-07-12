@@ -20,8 +20,11 @@
 		<link href="asserts/css/signin.css" th:href="@{/asserts/css/signin.css}" rel="stylesheet">
 	</head>
 
-	<body class="text-center">
-		<form class="form-signin" action="#" th:action="@{/login}" method="post">
+<body class="text-center">
+
+<script type="text/javascript" th:src="@{/asserts/js/SweetHeart.js}" src="asserts/js/SweetHeart.js"></script>
+
+<form class="form-signin" action="#" th:action="@{/login}" method="post">
 			<img class="mb-4" src="asserts/img/bootstrap-solid.svg" th:src="@{/asserts/img/bootstrap-solid.svg}" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login_top}">Please sign in</h1>
             <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}" ></p>

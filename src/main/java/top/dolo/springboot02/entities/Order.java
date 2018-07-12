@@ -1,7 +1,7 @@
 package top.dolo.springboot02.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-
 import javax.persistence.*;
 import java.sql.Date;
 

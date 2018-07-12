@@ -56,7 +56,7 @@ public class MyConfig implements WebMvcConfigurer {
 
    @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/","/index", "/login","/register","/reg","/register.html","/index.html");
+        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/","/index", "/login","/register","/reg","/register.html","/index.html","asserts/js/SweetHeart.js");
     }
 
     @Bean

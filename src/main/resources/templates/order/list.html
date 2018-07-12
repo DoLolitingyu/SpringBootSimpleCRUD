@@ -67,7 +67,7 @@
                         <td th:text="${order.cost}"></td>
                         <td th:text="${order.orderdate}"></td>
                         <td>
-                            <a class="btn btn-sm btn-primary" th:href="@{/order/}+${order.id}">编辑</a>
+                            <a class="btn btn-sm btn-primary" th:href="@{/order/}+${order.id}">详情</a>
                             <button th:attr="del_btn=@{/order/}+${order.id}" class="btn btn-sm btn-danger del_btn" th:href="@{/order/}+${order.id}">删除</button>
                         </td>
                     </tr>
@@ -135,6 +135,8 @@
         }
     });
 </script>
+
+<script type="text/javascript" th:src="@{/asserts/js/SweetHeart.js}" src="asserts/js/SweetHeart.js"></script>
 
 </body>
 
