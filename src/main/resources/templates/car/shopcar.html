@@ -75,8 +75,11 @@
                         <td th:text="${car.price}*${car.num}"></td>
                         <td>
                             <a class="btn btn-sm btn-primary" th:href="@{/car/}+${car.bookid}">编辑</a>
-                            <button id="del_btn" th:attr="del_btn=@{/car/}+${car.id}" class="btn btn-sm btn-danger del_btn" th:href="@{/car/}+${car.id}">删除</button>
+                            <button th:attr="del_btn=@{/car/}+${car.id}" class="btn btn-sm btn-danger del_btn" th:href="@{/car/}+${car.id}">删除</button>
                         </td>
+                        <!--<form id="deleteBtn" method="post">-->
+                            <!--<input type="hidden" name="_method" value="delete"/>-->
+                        <!--</form>-->
                     </tr>
                     </tbody>
                 </table>
@@ -108,7 +111,7 @@
     feather.replace()
 </script>
 <script type="text/javascript">
-    $("#del_btn").click(function (){
+    $(".del_btn").click(function (){
         $("#deleteBtn").attr("action", $(this).attr("del_btn")).submit();
         return false;
     });
