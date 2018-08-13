@@ -121,9 +121,11 @@ public class ShopCarController {
             OrderDetail orderDetail = new OrderDetail();
             orderDetail.setBookid(car.getBookid());
             orderDetail.setNum(car.getNum());
+            orderDetail.setBookName(car.getBookName());
             orderDetail.setOrderid(result.getId());
             orderDetailService.save(orderDetail);
         }
+        shopCarService.removeAll(user.getId());
         return "redirect:/orders";
     }
 }
