@@ -21,4 +21,6 @@ public class OrderDetail {
 
     private Integer bookid;
 
+    private String bookName;
+
 }
