@@ -43,6 +43,7 @@ public class OrderController {
         return "order/list";
     }
 
+    //获取订单详情
     @GetMapping("/order/{id}")
     public String seeOne(@PathVariable("id") Integer id, Model model){
         List<OrderDetail> result = orderDetailServicel.findAllByOrderId(id);
