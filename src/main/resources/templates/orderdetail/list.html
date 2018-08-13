@@ -56,8 +56,9 @@
                     <thead>
                     <tr>
                         <th>订单号</th>
-                        <th>bookid</th>
-                        <th>num</th>
+                        <th>BookId</th>
+                        <th>BookName</th>
+                        <th>Num</th>
                         <!--<th>操作</th>-->
                     </tr>
                     </thead>
@@ -65,6 +66,7 @@
                     <tr th:each="orderdetail:${orderdetails}">
                         <td th:text="${orderdetail.orderid}"></td>
                         <td th:text="${orderdetail.bookid}"></td>
+                        <td th:text="${orderdetail.bookName}"></td>
                         <td th:text="${orderdetail.num}"></td>
                         <!--<td>-->
                             <!--<button th:attr="del_btn=@{/order/}+${order.id}" class="btn btn-sm btn-danger del_btn" th:href="@{/order/}+${order.id}">查看</button>-->
